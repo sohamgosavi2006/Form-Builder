@@ -1,0 +1,57 @@
+.card {
+    overflow-x: auto;
+    margin-left: 5px;
+    margin-right: 5px;
+    position: relative;
+}
+
+table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px 12px;
+    word-break: break-word; /* Allow breaking words to prevent overflow */
+    overflow: visible; /* Ensure text is not truncated */
+    max-width: none; /* Remove any max-width restriction */
+}
+
+.btn-3d {
+    margin-left: 5px;
+    padding: 10px 20px;
+    border: none;
+    border-bottom: 4px solid #0056b3;
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 10px;
+    left: 5px;
+    z-index: 1000;
+}
+
+.btn-3d:hover {
+    transform: translateY(-2px);
+    border-bottom-width: 2px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn-3d:active {
+    transform: translateY(1px);
+    border-bottom-width: 1px;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.card-header {
+    margin-bottom: 15px; /* Add some spacing below the header */
+}

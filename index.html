@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Builder</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
+                <div class="card p-3 shadow-sm h-100">
+                    <div class="sidebar-sticky">
+                        <h4 class="my-4">My Workspace</h4>
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a href="#" class="circular-card">
+                                    <span class="form-text">Forms</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <main class="col-md-9 ml-sm-auto col-lg-10 px-4">
+                <h4 class="my-4">My Forms</h4>
+                <div class="card p-4 shadow-sm">
+                    <h5 class="card-title">Create New Form</h5>
+                    <div class="mb-3">
+                        <input type="text" class="form-control form-title-input" id="formTitle" placeholder="Form Title" oninput="toggleInputs()">
+                    </div>
+                    <div id="inputControls" class="d-flex gap-2 mb-3" style="display: none;">
+                        <button class="btn btn-success" onclick="addTextInput()">Add Text Input</button>
+                        <button class="btn btn-success" onclick="addMCQInput()">Add MCQ Input</button>
+                        <button class="btn btn-primary" onclick="saveForm()">Save Form</button>
+                    </div>
+                    <div id="formInputs" class="mt-4"></div>
+                </div>
+                <div class="mt-4">
+                    <table class="table" id="savedFormsTable">
+                        <thead>
+                            <tr>
+                                <th>Form Name</th>
+                                <th>Link</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="savedFormsBody"></tbody>
+                    </table>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

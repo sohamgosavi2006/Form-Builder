@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fill Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="fill-form.css">
+</head>
+<body>
+    <div class="container centered-card" style="position: relative; min-height: 100vh; display: flex; justify-content: center; align-items: center;">
+        <div class="card shadow-sm p-4" id="userCard">
+            <h3 class="card-title text-center">Enter Your Details</h3>
+            <div class="mb-3">
+                <label for="userName" class="form-label">Name</label>
+                <input type="text" class="form-control" id="userName" >
+            </div>
+            <div class="mb-3">
+                <label for="userEmail" class="form-label">Email</label>
+                <input type="email" class="form-control" id="userEmail">
+            </div>
+            <button class="btn btn-success w-100" id="saveUserBtn" disabled>Save</button>
+        </div>
+        <div class="card shadow-sm p-4 vh-100 overflow-auto w-150" id="formCard" style="display: none;">
+            <h3 class="card-title text-center" id="formTitle"></h3>
+            <form id="bioForm"></form>
+            <div id="submitMessage" class="text-center mt-3" style="display: none;">Form submitted successfully!</div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js" onload="console.log('Anime.js loaded')" onerror="alert('Failed to load Anime.js. Please check your internet connection.')"></script>
+    <script src="fill-form.js"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9323f2fbfa04bccb',t:'MTc0NDk3NzA3NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
